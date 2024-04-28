@@ -1,6 +1,6 @@
 ---
 title: Managing notifications from your inbox
-intro: 'Use your inbox to quickly triage and sync your notifications across email{% ifversion fpt or ghes or ghec %} and mobile{% endif %}.'
+intro: 'Use your inbox to quickly triage and sync your notifications across email and mobile.'
 redirect_from:
   - /articles/marking-notifications-as-read
   - /articles/saving-notifications-for-later
@@ -17,9 +17,7 @@ shortTitle: Manage from your inbox
 
 ## About your inbox
 
-{% ifversion fpt or ghes or ghec %}
 {% data reusables.notifications-v2.notifications-inbox-required-setting %} For more information, see "[AUTOTITLE](/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#choosing-your-notification-settings)."
-{% endif %}
 
 To access your notifications inbox, in the upper-right corner of any page, click {% octicon "bell" aria-label="The notifications bell" %}.
 
@@ -96,7 +94,7 @@ To add a `repo:` filter, you must include the owner of the repository in the que
 
 ### Supported `is:` queries
 
-To filter notifications for specific activity on {% data variables.location.product_location %}, you can use the  `is` query. For example, to only see repository invitation updates, use `is:repository-invitation`, and to only see {% data variables.product.prodname_dependabot_alerts %}, use `is:repository-vulnerability-alert`.
+To filter notifications for specific activity on {% data variables.product.prodname_dotcom %}, you can use the  `is` query. For example, to only see repository invitation updates, use `is:repository-invitation`, and to only see {% data variables.product.prodname_dependabot_alerts %}, use `is:repository-vulnerability-alert`.
 
 - `is:check-suite`
 - `is:commit`

@@ -23,7 +23,7 @@ shortTitle: Advanced Security billing
 
 {% ifversion fpt %}
 
-If you want to use {% data variables.product.prodname_GH_advanced_security %} features on any repository apart from a public repository on {% data variables.product.prodname_dotcom_the_website %}, you will need a {% data variables.product.prodname_GH_advanced_security %} license, available with {% data variables.product.prodname_ghe_cloud %} or {% data variables.product.prodname_ghe_server %}. {% data reusables.advanced-security.ghas-trial %}
+{% data reusables.advanced-security.ghas-license-info-for-fpt %}
 
 {% note %}
 
@@ -37,6 +37,17 @@ For information about billing for {% data variables.product.prodname_GH_advanced
 
 If you want to use {% data variables.product.prodname_GH_advanced_security %} features on any repository apart from a public repository on {% data variables.product.prodname_dotcom_the_website %}, you will need a {% data variables.product.prodname_GH_advanced_security %} license. For more information about {% data variables.product.prodname_GH_advanced_security %}, see "[AUTOTITLE](/get-started/learning-about-github/about-github-advanced-security)."
 
+{% ifversion security-configurations %}
+{% data reusables.security-configurations.managing-GHAS-licenses %}
+
+{% note %}
+
+**Note:** {% data reusables.security-configurations.security-configurations-beta-note-short %}
+
+{% endnote %}
+
+{% endif %}
+
 {% data reusables.advanced-security.ghas-trial-availability %} For more information, see "[AUTOTITLE](/billing/managing-billing-for-github-advanced-security/setting-up-a-trial-of-github-advanced-security)."
 
 {% data reusables.advanced-security.ghas-trial-invoiced %}
@@ -46,6 +57,17 @@ For other billing-related questions, contact {% data variables.contact.github_su
 {% elsif ghes %}
 
 You can make extra features for code security available to users by buying and uploading a license for {% data variables.product.prodname_GH_advanced_security %}. For more information about {% data variables.product.prodname_GH_advanced_security %}, see "[AUTOTITLE](/get-started/learning-about-github/about-github-advanced-security)."
+
+{% ifversion security-configurations %}
+{% data reusables.security-configurations.managing-GHAS-licenses %}
+
+{% note %}
+
+**Note:** {% data reusables.security-configurations.security-configurations-beta-note-short %}
+
+{% endnote %}
+
+{% endif %}
 
 {% endif %}
 
@@ -115,7 +137,7 @@ When you decide which repositories and organizations to prioritize for {% data v
 - Codebases that are the most critical to your company's success. These are the projects for which the introduction of vulnerable code, hard-coded secrets, or insecure dependencies would have the greatest impact on your company.
 - Codebases with the highest commit frequency. These are the most actively developed projects, consequently there is a higher risk that security problems could be introduced.
 
-When you have enabled {% data variables.product.prodname_GH_advanced_security %} for these organizations or repositories, assess which other codebases you could add without incurring billing for unique {% ifversion ghas-billing-UI-update %}active {% endif %}committers. Finally, review the remaining important and busy codebases. {% ifversion fpt or ghes or ghec %}If you want to increase the number of {% ifversion ghas-billing-UI-update %}licensed active committers, {% else %}seats in your license, {% endif %}contact {% data variables.contact.contact_enterprise_sales %}.{% endif %}
+When you have enabled {% data variables.product.prodname_GH_advanced_security %} for these organizations or repositories, assess which other codebases you could add without incurring billing for unique {% ifversion ghas-billing-UI-update %}active {% endif %}committers. Finally, review the remaining important and busy codebases. If you want to increase the number of {% ifversion ghas-billing-UI-update %}licensed active committers, {% else %}seats in your license, {% endif %}contact {% data variables.contact.contact_enterprise_sales %}.
 
 {% ifversion ghas-in-license-sync %}
 If your enterprise uses {% data variables.product.prodname_GH_advanced_security %} on both {% data variables.product.prodname_ghe_server %} and {% data variables.product.prodname_ghe_cloud %}, you can ensure users aren't consuming multiple licenses unnecessarily by synchronizing license usage between environments.{% ifversion ghec %} {% data variables.product.prodname_GH_advanced_security %} is included in license sync in {% data variables.product.prodname_ghe_server %} version 3.12 and later.{% endif %} For more information, see "[AUTOTITLE](/billing/managing-your-license-for-github-enterprise/syncing-license-usage-between-github-enterprise-server-and-github-enterprise-cloud)."
